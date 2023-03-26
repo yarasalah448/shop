@@ -15,6 +15,7 @@ public:
     ~Shopper();
     void buyItem(string name, float price);
     void operator--();
+ void operator --(int);
     static int getNumShoppers();
     Shopper& operator + (const Shopper& obj) const;
     static void getMaxItemInfo(string& item_name, float& price, string& name);
