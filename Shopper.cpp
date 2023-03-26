@@ -28,13 +28,8 @@ Shopper::Shopper(const Shopper &obj)
 }
 
 //destructor
-Shopper::~Shopper()
-{
-for(int i=0; i<no_items; i++){
-    
-}
-delete[] items;
-no_shoppers--;
+Shopper::~Shopper(){
+delete [] items;
 }
 //
 void Shopper::buyItem(string name, float price)
@@ -54,7 +49,7 @@ void Shopper::operator--()
 {
     --no_items;
 }
-void Shopper::operator--(int s)
+void Shopper::operator--(Shopper& s)
 {
     s.no_items--;
 }
